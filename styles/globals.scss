@@ -5,8 +5,8 @@ $tertiary-color: #99E2D0;
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 body {
-    max-width: 100%;
     margin: 0;
+    background: #F6F6F6;
 }
 
 /*
@@ -33,7 +33,7 @@ header {
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
-        background: var(--White, #FFF);
+        background: #FFF;
         /* Shadow/Badge */
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
         z-index: 1;
@@ -42,7 +42,7 @@ header {
             text-decoration: none;
 
             p {
-                color: var(--Black, #101010);
+                color: #101010;
                 text-align: center;
                 font-family: Shrikhand;
                 font-size: 30px;
@@ -63,8 +63,95 @@ header {
         align-items: center;
         gap: 17px;
         flex-shrink: 0;
-        background: var(--Grey-2, #EAEAEA);
+        background: #EAEAEA;
         ;
+    }
+}
+
+
+/********** Main **********/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        width: auto;
+        height: 68px;
+        flex-shrink: 0;
+        padding-top: 45px;
+        margin: 0;
+        color: #000;
+        text-align: center;
+        /* Section Title */
+        font-family: Roboto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    p {
+        color: #353535;
+        text-align: center;
+        margin: 0;
+        padding-bottom: 20px;
+        /* Paragraph */
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    button {
+        width: 238px;
+        height: 59px;
+        margin-bottom: 50px;
+        border-radius: 25px;
+        background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+        /* Shadow/Button */
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        /* Texte */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #FFF;
+        text-align: center;
+        /* Button */
+        cursor: pointer;
+        border: none;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        transition: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        &:hover {
+            background: linear-gradient(193deg, #7a42ba -11.44%, #e56fc7 123.93%);
+            box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.35);
+        }
+    }
+
+    .fonctionnement {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        background: #FFF;
+
+        h2 {
+            height: 31px;
+            padding: 26px 0 26px 35px;
+            color: #000;
+            /* Section Title */
+            font-family: Roboto;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
     }
 }
 
