@@ -3,6 +3,8 @@ $primary-color: #9356DC;
 $secondaty-color: #FF79DA;
 $tertiary-color: #99E2D0;
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 body {
     margin: 0;
@@ -100,14 +102,12 @@ main {
         /* Paragraph */
         font-family: Roboto;
         font-size: 18px;
-        font-style: normal;
         font-weight: 300;
-        line-height: normal;
     }
 
     button {
-        width: 238px;
-        height: 59px;
+        width: 218px;
+        height: 50px;
         margin-bottom: 50px;
         border-radius: 25px;
         background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -124,10 +124,8 @@ main {
         border: none;
         font-family: Roboto;
         font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        transition: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        transition: 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
         &:hover {
             background: linear-gradient(193deg, #7a42ba -11.44%, #e56fc7 123.93%);
             box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.35);
@@ -143,6 +141,7 @@ main {
 
         h2 {
             height: 31px;
+            margin-bottom: 0;
             padding: 26px 0 26px 35px;
             color: #000;
             /* Section Title */
@@ -151,6 +150,68 @@ main {
             font-style: normal;
             font-weight: 700;
             line-height: normal;
+        }
+
+        .fonctionality-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            counter-reset: cardCounter; /* Initialisation du compteur */
+
+            .card {
+                display: flex;
+                align-items: center;
+                position: relative;
+                padding-left: 35px;
+                margin-bottom: 30px;
+                flex-shrink: 1;
+                width: 80%;
+                height: 72.379px;
+                border-radius: 20px;
+                background: var(--Background, #F6F6F6);
+                /* Shadow/Instructions */
+                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+                &:last-child {
+                    margin-bottom: 50px;
+                }
+
+                &::before {
+                    content: counter(cardCounter);
+                    /* Utilisation de la propriété counter */
+                    counter-increment: cardCounter;
+                    /* Incrémentation du compteur à chaque carte */
+                    position: absolute;
+                    top: 50%;
+                    left: -12px;
+                    transform: translateY(-50%);
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    background-color: #9356DC;
+                    color: #fff;
+                    font-size: 14px;
+                    /* Ajustement de la taille de la police */
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                img {
+                    width: 19px;
+                    padding-right: 25px;
+                }
+
+                p {
+                    color: #000;
+                    padding: 0;
+                    /* Text */
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
         }
     }
 }
