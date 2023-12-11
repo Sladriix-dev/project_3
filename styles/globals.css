@@ -109,7 +109,7 @@ main button {
   transition: 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 main button:hover {
-  background: linear-gradient(193deg, #7a42ba -11.44%, #e56fc7 123.93%);
+  background: linear-gradient(193deg, #9356DC -11.44%, #FFC0E8 123.93%);
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.35);
 }
 main .fonctionnement {
@@ -136,7 +136,8 @@ main .fonctionnement .fonctionality-card {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  counter-reset: cardCounter; /* Initialisation du compteur */
+  counter-reset: cardCounter;
+  /* Initialisation du compteur */
 }
 main .fonctionnement .fonctionality-card .card {
   display: flex;
@@ -253,11 +254,25 @@ main .restaurants .menu-container .menu-card .card-description .descriptif p {
   font-family: Roboto;
   font-size: 17px;
   padding: 0;
+  text-align: left;
 }
-main .restaurants .menu-container .menu-card .card-description img {
-  height: 21px;
-  width: auto;
-  padding: 15px;
+main .restaurants .menu-container .menu-card .card-description .like-icon {
+  cursor: pointer;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 25px;
+  background-image: url("../assets/svg/Like.svg");
+  /* Remplace avec le chemin de ton SVG blanc */
+  background-size: cover;
+  transition: background-image 0.3s ease;
+}
+main .restaurants .menu-container .menu-card .card-description .like-icon:hover {
+  background-image: url("../assets/svg/Like-gradient.svg");
+  /* Remplace avec le chemin de ton SVG avec dégradé */
+}
+main .restaurants .menu-container .menu-card .card-description #like-checkbox {
+  display: none;
 }
 
 /********** Footer **********/
@@ -294,6 +309,7 @@ footer .links {
 }
 footer .links ul {
   margin: 0;
+  padding-left: 25px;
 }
 footer .links ul li {
   display: flex;
