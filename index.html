@@ -22,75 +22,81 @@
     </header>
 
     <main>
-        <h1>Réservez le menu qui <br />vous convient</h1>
-        <p>Découvrez des restaurants d’exception,<br /> sélectionnés par nos soins.</p>
-        <button type="submit">Explorer nos restaurants</button>
-        <section class="fonctionnement">
-            <h2>Fonctionnement</h2>
-            <div class="fonctionality-card">
-                <div class="card">
-                    <img src="./assets/svg/mobile-screen-button.svg" alt="mobile icon">
-                    <p>Choisissez un restaurant</p>
+        <!-- Loader -->
+        <div id="loader"></div>
+        
+        <!-- Contenu de ma page -->
+        <div class="content">
+            <h1>Réservez le menu qui <br />vous convient</h1>
+            <p>Découvrez des restaurants d’exception,<br /> sélectionnés par nos soins.</p>
+            <button type="submit">Explorer nos restaurants</button>
+            <section class="fonctionnement">
+                <h2>Fonctionnement</h2>
+                <div class="fonctionality-card">
+                    <div class="card">
+                        <img src="./assets/svg/mobile-screen-button.svg" alt="mobile icon">
+                        <p>Choisissez un restaurant</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/svg/list-ul.svg" alt="list icon">
+                        <p>Composez votre menu</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/svg/store.svg" alt="store icon">
+                        <p>Dégustez au restaurant</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="./assets/svg/list-ul.svg" alt="list icon">
-                    <p>Composez votre menu</p>
+            </section>
+            <section class="restaurants">
+                <h2>Restaurants</h2>
+                <div class="menu-container">
+                    <a href="./menu/palette_du_gout.html" class="menu-card">
+                        <img src="./assets/images/palette_du_gout.png" alt="Restaurant Palette du gout">
+                        <div class="card-description">
+                            <div class="descriptif">
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <input type="checkbox" id="like-checkbox" class="like-checkbox">
+                            <label for="like-checkbox" class="like-icon"></label>
+                        </div>
+                    </a>
+                    <a href="./menu/note_enchantee.html" class="menu-card">
+                        <img src="./assets/images/note_enchantee.png" alt="Restaurant La note enchantee">
+                        <div class="card-description">
+                            <div class="descriptif">
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
+                            <input type="checkbox" id="like-checkbox" class="like-checkbox">
+                            <label for="like-checkbox" class="like-icon"></label>
+                        </div>
+                    </a>
+                    <a href="./menu/a_la_francaise.html" class="menu-card">
+                        <img src="./assets/images/a_la_francaise.png" alt="Restaurant A la francaise">
+                        <div class="card-description">
+                            <div class="descriptif">
+                                <h3>À la française</h3>
+                                <p>Cité rouge</p>
+                            </div>
+                            <input type="checkbox" id="like-checkbox" class="like-checkbox">
+                            <label for="like-checkbox" class="like-icon"></label>
+                        </div>
+                    </a>
+                    <a href="./menu/delice_des_sens.html" class="menu-card">
+                        <img src="./assets/images/le_delice_des_sens.png" alt="Restaurant Le delice des sens">
+                        <div class="card-description">
+                            <div class="descriptif">
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <input type="checkbox" id="like-checkbox" class="like-checkbox">
+                            <label for="like-checkbox" class="like-icon"></label>
+                        </div>
+                    </a>
                 </div>
-                <div class="card">
-                    <img src="./assets/svg/store.svg" alt="store icon">
-                    <p>Dégustez au restaurant</p>
-                </div>
-            </div>
-        </section>
-        <section class="restaurants">
-            <h2>Restaurants</h2>
-            <div class="menu-container">
-                <a href="./menu/palette_du_gout.html" class="menu-card">
-                    <img src="./assets/images/palette_du_gout.png" alt="Restaurant Palette du gout">
-                    <div class="card-description">
-                        <div class="descriptif">
-                            <h3>La palette du goût</h3>
-                            <p>Ménilmontant</p>
-                        </div>
-                        <input type="checkbox" id="like-checkbox" class="like-checkbox">
-                        <label for="like-checkbox" class="like-icon"></label>
-                    </div>
-                </a>
-                <a href="./menu/note_enchantee.html" class="menu-card">
-                    <img src="./assets/images/note_enchantee.png" alt="Restaurant La note enchantee">
-                    <div class="card-description">
-                        <div class="descriptif">
-                            <h3>La note enchantée</h3>
-                            <p>Charonne</p>
-                        </div>
-                        <input type="checkbox" id="like-checkbox" class="like-checkbox">
-                        <label for="like-checkbox" class="like-icon"></label>
-                    </div>
-                </a>
-                <a href="./menu/a_la_francaise.html" class="menu-card">
-                    <img src="./assets/images/a_la_francaise.png" alt="Restaurant A la francaise">
-                    <div class="card-description">
-                        <div class="descriptif">
-                            <h3>À la française</h3>
-                            <p>Cité rouge</p>
-                        </div>
-                        <input type="checkbox" id="like-checkbox" class="like-checkbox">
-                        <label for="like-checkbox" class="like-icon"></label>
-                    </div>
-                </a>
-                <a href="./menu/delice_des_sens.html" class="menu-card">
-                    <img src="./assets/images/le_delice_des_sens.png" alt="Restaurant Le delice des sens">
-                    <div class="card-description">
-                        <div class="descriptif">
-                            <h3>Le délice des sens</h3>
-                            <p>Folie-Méricourt</p>
-                        </div>
-                        <input type="checkbox" id="like-checkbox" class="like-checkbox">
-                        <label for="like-checkbox" class="like-icon"></label>
-                    </div>
-                </a>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer>
@@ -117,4 +123,5 @@
         </div>
     </footer>
 </body>
+
 </html>
