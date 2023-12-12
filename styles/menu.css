@@ -2,6 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 body {
   margin: 0;
   background: #f6f6f6;
@@ -130,6 +140,7 @@ main .menu-section .all-cards {
   gap: 20px;
   display: flex;
   flex-direction: column;
+  margin-top: 25px;
 }
 main .menu-section .all-cards .card {
   display: flex;
@@ -144,9 +155,8 @@ main .menu-section .all-cards .card {
   justify-content: space-around;
   padding: 10px 20px 10px 20px;
   cursor: pointer;
-}
-main .menu-section .all-cards .card:first-child {
-  margin-top: 25px;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
 }
 main .menu-section .all-cards .card label {
   cursor: pointer;
@@ -175,6 +185,7 @@ main .menu-section .all-cards .card .descriptif-price {
 main .menu-section .all-cards .card .descriptif-price p {
   margin: 0;
   height: 19px;
+  width: 68%;
   flex-shrink: 0;
   align-self: stretch;
   overflow: hidden;
@@ -195,6 +206,8 @@ main .menu-section .all-cards .card .descriptif-price span {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  transition: transform 0.3s ease;
+  display: inline-block;
 }
 main .menu-section .all-cards .card .like-checkbox {
   display: none;
@@ -202,8 +215,8 @@ main .menu-section .all-cards .card .like-checkbox {
 main .menu-section .all-cards .card .like-icon-2 {
   position: absolute;
   top: 50%;
-  right: -11vh;
-  width: 37%;
+  right: 0;
+  width: fit-content;
   height: 105%;
   transform: translateY(-50%) translateX(100%);
   transition: transform 0.3s ease;
@@ -211,6 +224,18 @@ main .menu-section .all-cards .card .like-icon-2 {
 main .menu-section .all-cards .card .like-icon-2 img {
   width: auto;
   height: 100%;
+}
+main .menu-section .all-cards .card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+main .menu-section .all-cards .card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+main .menu-section .all-cards .card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+main .menu-section .all-cards .like-checkbox:checked + label .descriptif-price span {
+  transform: translateX(-7.5vh);
 }
 main .menu-section .all-cards .like-checkbox:checked + label .like-icon-2 {
   transform: translateY(-50%) translateX(0);
@@ -286,6 +311,13 @@ footer .links ul li img {
   margin-right: 7px;
 }
 footer .links ul li p {
+  margin: 7px 0 7px 0;
+}
+footer .links ul li a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
   margin: 7px 0 7px 0;
 }
 
