@@ -162,8 +162,18 @@ main {
                 margin: 0 15px 0 15px;
                 justify-content: space-around;
                 padding: 10px 20px 10px 20px;
+                cursor: pointer;
+
                 &:first-child {
                     margin-top: 25px;
+                }
+
+                label {
+                    cursor: pointer;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
                 }
 
                 h4 {
@@ -211,30 +221,29 @@ main {
                     }
                 }
 
-                .like-button {
-                    position: absolute;
-                    top: 50%; // Centrer verticalement
-                    right: -11vh; // Commencer hors de la carte
-                    transform: translateY(-50%); // Centrer verticalement
-                    height: 100%; // La hauteur de votre bouton like
-                    background-color: $tertiary-color; // La couleur de fond pour le bouton
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    transition: right 0.4s ease-in-out; // Animation douce pour le glissement
-                    z-index: 2; // S'assurer que le bouton like est au-dessus du contenu de la carte
-                    img {
-                        height: 110%;
-                    }
-                }
-            
-                &:hover .like-button {
-                    right: 0px; // Le bouton like glisse vers l'intérieur de la carte
+                .like-checkbox {
+                    display: none;
                 }
 
-                &:active .like-button {
-                    right: 0px;
+                .like-icon-2 {
+                    // Styles pour votre icône like, initialement masquée
+                    position: absolute;
+                    top: 50%;
+                    right: -11vh;
+                    width: 37%;
+                    height: 105%;
+                    transform: translateY(-50%) translateX(100%); // Commencez caché à droite
+                    transition: transform 0.3s ease;
+                    img {
+                        width: auto;
+                        height: 100%;
+                    }
                 }
+            }
+
+            .like-checkbox:checked+label .like-icon-2 {
+                // Lorsque la checkbox est cochée, affichez l'icône de like
+                transform: translateY(-50%) translateX(0);
             }
         }
 

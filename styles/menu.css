@@ -143,9 +143,17 @@ main .menu-section .all-cards .card {
   margin: 0 15px 0 15px;
   justify-content: space-around;
   padding: 10px 20px 10px 20px;
+  cursor: pointer;
 }
 main .menu-section .all-cards .card:first-child {
   margin-top: 25px;
+}
+main .menu-section .all-cards .card label {
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 main .menu-section .all-cards .card h4 {
   height: 21px;
@@ -188,27 +196,24 @@ main .menu-section .all-cards .card .descriptif-price span {
   font-weight: 700;
   line-height: normal;
 }
-main .menu-section .all-cards .card .like-button {
+main .menu-section .all-cards .card .like-checkbox {
+  display: none;
+}
+main .menu-section .all-cards .card .like-icon-2 {
   position: absolute;
   top: 50%;
   right: -11vh;
-  transform: translateY(-50%);
+  width: 37%;
+  height: 105%;
+  transform: translateY(-50%) translateX(100%);
+  transition: transform 0.3s ease;
+}
+main .menu-section .all-cards .card .like-icon-2 img {
+  width: auto;
   height: 100%;
-  background-color: #99E2D0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: right 0.4s ease-in-out;
-  z-index: 2;
 }
-main .menu-section .all-cards .card .like-button img {
-  height: 110%;
-}
-main .menu-section .all-cards .card:hover .like-button {
-  right: 0px;
-}
-main .menu-section .all-cards .card:active .like-button {
-  right: 0px;
+main .menu-section .all-cards .like-checkbox:checked + label .like-icon-2 {
+  transform: translateY(-50%) translateX(0);
 }
 main .menu-section button {
   width: 218px;
