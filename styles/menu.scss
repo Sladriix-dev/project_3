@@ -12,6 +12,7 @@ $background-color: #f6f6f6;
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -83,6 +84,7 @@ main {
         z-index: 2;
         /* Pour placer la div au-dessus de l'image */
         margin-top: -50px;
+
         @media (min-width: 1024px) {
             margin: -50px auto 0;
             box-sizing: border-box; // S'assure que padding et border sont inclus dans la largeur
@@ -100,6 +102,7 @@ main {
             background-color: $background-color;
             border-radius: 50px 50px 0 0;
             z-index: -1;
+
             /* Place l'élément derrière le contenu interne */
             @media (min-width: 1024px) {
                 left: 50%;
@@ -115,6 +118,7 @@ main {
             align-items: center;
             position: relative;
             z-index: 1;
+
             @media(min-width: 1024px) {
                 justify-content: center;
             }
@@ -132,21 +136,24 @@ main {
                 display: inline-block;
                 width: 30px;
                 height: 30px;
-                margin-right: 25px;
+                margin: 0 0 15px 25px;
                 background-image: url('../assets/svg/Like.svg');
                 background-size: cover;
                 transition: background-image 0.3s ease;
-                @media(min-width: 1024px) {
-                    margin: 0 0 15px 25px;
-                }
 
-                &:hover {
-                    background-image: url('../assets/svg/Like-gradient.svg');
+                @media (min-width: 1024px) {
+                    &:hover {
+                        background-image: url('../assets/svg/Like-gradient.svg');
+                    }
                 }
             }
 
             #like-checkbox {
                 display: none;
+
+                &:checked+.like-icon {
+                    background-image: url('../assets/svg/Like-gradient.svg');
+                }
             }
         }
 
@@ -201,11 +208,13 @@ main {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
+
                     // Animation du like sur le hover pour le desktop
                     @media (min-width: 1024px) {
                         &:hover .like-icon-2 {
                             transform: translateY(-50%) translateX(0);
                         }
+
                         &:hover span {
                             transform: translateX(-7.5vh);
                         }
@@ -280,10 +289,21 @@ main {
                 }
             }
 
-            .card:nth-child(1) { animation-delay: 0.1s; }
-            .card:nth-child(2) { animation-delay: 0.2s; }
-            .card:nth-child(3) { animation-delay: 0.4s; }
-            .card:nth-child(4) { animation-delay: 0.6s; }
+            .card:nth-child(1) {
+                animation-delay: 0.1s;
+            }
+
+            .card:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+
+            .card:nth-child(3) {
+                animation-delay: 0.4s;
+            }
+
+            .card:nth-child(4) {
+                animation-delay: 0.6s;
+            }
 
             .like-checkbox:checked+label .descriptif-price span {
                 transform: translateX(-7.5vh);
@@ -334,6 +354,7 @@ footer {
     align-items: flex-start;
     gap: 16px;
     background: var(--Grey, #353535);
+
     @media (min-width: 1024px) {
         height: 100px;
         flex-direction: row; // Alignement horizontal pour les écrans plus larges
@@ -348,6 +369,7 @@ footer {
         padding-right: 0px;
         justify-content: center;
         align-items: center;
+
         @media (min-width: 1024px) {
             order: 1; // Place le logo en premier sur la ligne
         }
@@ -367,6 +389,7 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         gap: 7px;
+
         @media (min-width: 1024px) {
             flex-direction: row; // Alignement horizontal pour les écrans plus larges
             align-items: center;
@@ -377,6 +400,7 @@ footer {
         ul {
             margin: 0;
             padding-left: 25px;
+
             @media (min-width: 1024px) {
                 display: flex;
                 align-items: center;
@@ -387,6 +411,7 @@ footer {
                 display: flex;
                 color: #fff;
                 list-style: none;
+
                 @media (min-width: 1024px) {
                     margin: 0 10px;
                 }

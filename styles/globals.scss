@@ -421,14 +421,36 @@ main {
                         background-image: url('../assets/svg/Like.svg');
                         background-size: cover;
                         transition: background-image 0.3s ease;
+                        @media (min-width: 1024px) {
+                           &:hover {
+                            background-image: url('../assets/svg/Like-gradient.svg');
+                            } 
+                        } 
+                    }
 
-                        &:hover {
+                    #like-checkbox1 {
+                        display: none;
+                        &:checked + .like-icon {
                             background-image: url('../assets/svg/Like-gradient.svg');
                         }
                     }
-
-                    #like-checkbox {
+                    #like-checkbox2 {
                         display: none;
+                        &:checked + .like-icon {
+                            background-image: url('../assets/svg/Like-gradient.svg');
+                        }
+                    }
+                    #like-checkbox3 {
+                        display: none;
+                        &:checked + .like-icon {
+                            background-image: url('../assets/svg/Like-gradient.svg');
+                        }
+                    }
+                    #like-checkbox4 {
+                        display: none;
+                        &:checked + .like-icon {
+                            background-image: url('../assets/svg/Like-gradient.svg');
+                        }
                     }
                 }
             }

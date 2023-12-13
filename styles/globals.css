@@ -397,11 +397,34 @@ main .restaurants .menu-container .menu-card .card-description .like-icon {
   background-size: cover;
   transition: background-image 0.3s ease;
 }
-main .restaurants .menu-container .menu-card .card-description .like-icon:hover {
+@media (min-width: 1024px) {
+  main .restaurants .menu-container .menu-card .card-description .like-icon:hover {
+    background-image: url("../assets/svg/Like-gradient.svg");
+  }
+}
+main .restaurants .menu-container .menu-card .card-description #like-checkbox1 {
+  display: none;
+}
+main .restaurants .menu-container .menu-card .card-description #like-checkbox1:checked + .like-icon {
   background-image: url("../assets/svg/Like-gradient.svg");
 }
-main .restaurants .menu-container .menu-card .card-description #like-checkbox {
+main .restaurants .menu-container .menu-card .card-description #like-checkbox2 {
   display: none;
+}
+main .restaurants .menu-container .menu-card .card-description #like-checkbox2:checked + .like-icon {
+  background-image: url("../assets/svg/Like-gradient.svg");
+}
+main .restaurants .menu-container .menu-card .card-description #like-checkbox3 {
+  display: none;
+}
+main .restaurants .menu-container .menu-card .card-description #like-checkbox3:checked + .like-icon {
+  background-image: url("../assets/svg/Like-gradient.svg");
+}
+main .restaurants .menu-container .menu-card .card-description #like-checkbox4 {
+  display: none;
+}
+main .restaurants .menu-container .menu-card .card-description #like-checkbox4:checked + .like-icon {
+  background-image: url("../assets/svg/Like-gradient.svg");
 }
 
 /********** Footer **********/

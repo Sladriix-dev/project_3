@@ -126,21 +126,21 @@ main .menu-section .resto-title .like-icon {
   display: inline-block;
   width: 30px;
   height: 30px;
-  margin-right: 25px;
+  margin: 0 0 15px 25px;
   background-image: url("../assets/svg/Like.svg");
   background-size: cover;
   transition: background-image 0.3s ease;
 }
 @media (min-width: 1024px) {
-  main .menu-section .resto-title .like-icon {
-    margin: 0 0 15px 25px;
+  main .menu-section .resto-title .like-icon:hover {
+    background-image: url("../assets/svg/Like-gradient.svg");
   }
-}
-main .menu-section .resto-title .like-icon:hover {
-  background-image: url("../assets/svg/Like-gradient.svg");
 }
 main .menu-section .resto-title #like-checkbox {
   display: none;
+}
+main .menu-section .resto-title #like-checkbox:checked + .like-icon {
+  background-image: url("../assets/svg/Like-gradient.svg");
 }
 main .menu-section h3 {
   display: inline-block;
