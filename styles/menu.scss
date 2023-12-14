@@ -202,25 +202,6 @@ main {
                 opacity: 0; // Commencer avec les cartes invisibles
                 animation: fadeInUp 0.5s ease forwards;
 
-                label {
-                    cursor: pointer;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-
-                    // Animation du like sur le hover pour le desktop
-                    @media (min-width: 1024px) {
-                        &:hover .like-icon-2 {
-                            transform: translateY(-50%) translateX(0);
-                        }
-
-                        &:hover span {
-                            transform: translateX(-7.5vh);
-                        }
-                    }
-                }
-
                 h4 {
                     height: 21px;
                     margin: 0;
@@ -280,13 +261,45 @@ main {
                     width: fit-content;
                     height: 105%;
                     transform: translateY(-50%) translateX(100%); // Caché à droite
-                    transition: transform 0.3s ease;
+                    transition: transform 0.3s ease-in-out;
+                    z-index: 2;
 
                     img {
                         width: auto;
                         height: 100%;
                     }
                 }
+
+                @media (min-width:1024px) {
+                    &:hover .like-icon-2 {
+                        // Lorsque vous survolez la carte, montrez le like-icon
+                        transform: translateY(-50%) translateX(0);
+                    }
+
+                    &:hover span {
+                        transform: translateX(-7.5vh);
+                    }
+                }
+
+                .like-checkbox:checked~.like-icon-2 {
+                    transform: translateY(-50%) translateX(0);
+                    z-index: 2;
+                }
+
+                .like-checkbox:checked~.descriptif-price span {
+                    transform: translateX(-7.5vh);
+                }
+
+                .like-label {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 0;
+                }
+
             }
 
             .card:nth-child(1) {
@@ -303,15 +316,6 @@ main {
 
             .card:nth-child(4) {
                 animation-delay: 0.6s;
-            }
-
-            .like-checkbox:checked+label .descriptif-price span {
-                transform: translateX(-7.5vh);
-            }
-
-            .like-checkbox:checked+label .like-icon-2 {
-                // Lorsque la checkbox est cochée, affichez l'icône de like
-                transform: translateY(-50%) translateX(0);
             }
         }
 
