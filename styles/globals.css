@@ -359,6 +359,32 @@ main .restaurants .menu-container .menu-card a img {
   height: 231px;
   object-fit: cover;
 }
+main .restaurants .menu-container .menu-card .new-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 29px;
+  top: 15px;
+  right: 20px;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 2px;
+  background: #99E2D0;
+  /* Shadow/Badge */
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  color: var(--Green-Font, #008766);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  z-index: 3;
+}
 main .restaurants .menu-container .menu-card .like-checkbox {
   display: none;
 }
@@ -371,8 +397,8 @@ main .restaurants .menu-container .menu-card .like-icon {
   right: 10px;
   cursor: pointer;
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   margin-right: 25px;
   background-image: url("../assets/svg/Like.svg");
   background-size: cover;
